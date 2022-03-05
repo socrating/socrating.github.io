@@ -13,7 +13,7 @@
 
 
 
-<title>Hello World | zhpo</title>
+<title>在linux上运行clash | zhpo</title>
 
 
 
@@ -127,73 +127,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">在linux上运行clash</h1>
             
                 <div class="post-meta">
                     
@@ -202,7 +140,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 5, 2022&nbsp;&nbsp;1:41:08</a>
+                        Date: <a href="#">March 5, 2022&nbsp;&nbsp;14:20:46</a>
                         </span>
                     
                     
@@ -211,19 +149,26 @@
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>由于 Linux 发行版版本众多，我们无法提供所有发行版的安装说明，下文以 Ubuntu Desktop 20.04 LTS为例。（作为一个 Linux 用户，您应该明白如何安装。）</p>
+<p>在终端执行 cd &amp;&amp; mkdir clash ，创建 clash 文件夹。</p>
+<p>在终端执行 cd &amp;&amp; cd clash ，进入 clash 文件夹。</p>
+<p>下载 Clash 文件，撰写此教程时最新版本为v1.41，所以下载命令为 wget -N –no-check-certificate <a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases/download/v1.4.1/clash-linux-amd64-v1.4.1.gz">https://github.com/Dreamacro/clash/releases/download/v1.4.1/clash-linux-amd64-v1.4.1.gz</a> 。</p>
+<p>在终端执行 gunzip clash-linux-amd64-v1.4.1.gz ，解压.gz文件。</p>
+<p>将解压后的文件重命名为 clash。</p>
+<p>在终端执行 chmod +x clash 赋予 Clash 执行权限</p>
+<p>复制托管链接</p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/snipaste2021-03-0520-28-34_19gj3od.jpg" alt="用户中心-复制托管链接"></p>
+<p>在终端执行 wget -O config.yaml 刚刚复制的托管链接</p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/snipaste2021-03-0520-33-08_uyuh07.jpg" alt="下载 Clash yaml 文件"></p>
+<p>在终端执行 .&#x2F;clash -d . 即可启动 Clash，同時启动 HTTP 代理和 Socks5 代理。</p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/clash6_1uxqgsn.jpg" alt="启动Clash"></p>
+<p>访问 <a target="_blank" rel="noopener" href="http://clash.razord.top/#/proxies">Clash Dashboard</a> 可以进行切换节点、延迟检测等操作。Host和端口请按照下图设置。</p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/clash3_q76k5z.jpg" alt="Host: 127.0.0.1，端口: 9090"></p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/clash2_x3v0yo.jpg" alt="策略组或节点选择"></p>
+<p>设置代理</p>
+<p>打开网络代理设置-有线设置，网络代理-选择手动，填写 HTTP 和 HTTPS 代理为 127.0.0.1:7890 ，填写Socks主机为 127.0.0.1:7891 ，即可启用系统代理。</p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/clash4_fbscrr.jpg" alt="img"></p>
+<p><img src="https://storage.crisp.chat/users/helpdesk/website/1fb817fa29fb6300/clash5_1rgij6s.jpg" alt="img"></p>
 
         </div>
 
@@ -238,7 +183,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2022/03/05/hello-world/">http://example.com/2022/03/05/hello-world/</a></span>
+                        <span><a href="http://example.com/2022/03/05/test/">http://example.com/2022/03/05/test/</a></span>
                     </p>
                 
                 
@@ -271,8 +216,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/03/05/test/">在linux上运行clash</a>
             
+            <a class="next" rel="next" href="/2022/03/05/hello-world/">Hello World</a>
             
         </section>
 
